@@ -9,5 +9,9 @@ for row in ws.iter_rows():
     #List comprehension
     result.append([cell.value for cell in row])
     
-print(result)
+#累積全壘打sum    
+sum = 0
+for r in result[1:]:
+    sum += int(r[11])
     
+print(f"The total number of home runs for Doggers was {sum}.")
